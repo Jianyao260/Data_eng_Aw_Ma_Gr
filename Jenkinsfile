@@ -8,7 +8,7 @@ pipeline{
     }
     stage('Run the docker image'){
       steps{
-        sh 'docker run -d -p 6379:6379 -it --name 'tweet_app_c' 'my_tweet_app''
+        sh 'docker run -d -p 80:80 -it --name 'tweet_app_c' 'my_tweet_app''
       }  
     }
     stage('Testing'){
