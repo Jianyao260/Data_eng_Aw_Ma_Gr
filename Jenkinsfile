@@ -19,7 +19,6 @@ pipeline{
     stage('Docker images down'){
       steps{
         sh 'docker rm -f tweet_app_c'
-        sh 'docker rmi -f mytweetapp'
       }
     }
   }
