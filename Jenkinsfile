@@ -3,12 +3,12 @@ pipeline{
   stages {
     stage('Build the Flask application'){
       steps{
-        sh 'docker build -t my_tweet_app .'
+        sh 'docker build -t mytweetapp .'
       }
     }
     stage('Run the docker image'){
       steps{
-        sh 'docker run -d -p 80:80 -it --name tweet_app_c my_tweet_app'
+        sh 'docker run -d -p 80:80 -it --name tweet_app_c mytweetapp'
       }  
     }
     stage('Testing'){
@@ -18,9 +18,8 @@ pipeline{
     }
     stage('Docker images down'){
       steps{
-        sh 'docker rm -f redis'
-        sh 'docker rm -f myflaskapp_c'
-        sh 'docker rmi -f myflaskapp'
+        sh 'docker rm -f tweet_app_c'
+        sh 'docker rmi -f mytweetapp'
       }
     }
   }
