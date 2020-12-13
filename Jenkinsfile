@@ -13,7 +13,7 @@ pipeline{
     }
     stage('Testing'){
       steps{
-        sh 'python test_app.py'
+        sh 'python test_tweet_processing.py '
       }
     }
     stage('Docker images down'){
