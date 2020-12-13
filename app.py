@@ -34,7 +34,7 @@ def predict():
             return render_template('index.html', prediction_text='No matching tweets found')
     
     else:
-
+        
         return render_template('index.html', prediction_text='Please enter a valid sentence')
 
 
