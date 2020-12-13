@@ -6,9 +6,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import CountVectorizer
 from gensim.parsing.preprocessing import remove_stopwords
 
-def clean_tweets():
-
-    df = pd.read_csv('tweets.csv')
+def clean_tweets(df):
 
     df_text = df.drop(columns=['Unnamed: 0','date','id','link','retweet','author']) 
 
@@ -30,6 +28,8 @@ def clean_tweets():
 
     pickle.dump(arr_og, open('arr_og.pkl', 'wb'))
     pickle.dump(arr, open('arr.pkl', 'wb'))
+
+    return arr
 
 def similar_tweets(sentence, arr, arr_og):
 
