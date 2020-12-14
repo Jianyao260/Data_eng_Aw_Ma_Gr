@@ -18,7 +18,10 @@ pipeline{
     }
     stage('Docker images down'){
       steps{
-        sh 'docker rm -f tweet_app_c'
+        script{
+          input 'Stop the container'
+          sh 'docker rm -f tweet_app_c'
+        }
       }
     }
   }
