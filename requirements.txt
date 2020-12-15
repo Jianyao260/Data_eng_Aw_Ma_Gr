@@ -4,3 +4,4 @@ numpy
 pickles
 sklearn
 gensim
+prometheus_flask_exporter
