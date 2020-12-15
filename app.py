@@ -3,10 +3,12 @@ import pandas as pd
 from flask import Flask, request, jsonify, render_template
 import pickle
 from tweet_processing import similar_tweets
+from prometheus_flask_exporter import PrometheusMetrics
 
 arr = pickle.load(open('arr.pkl', 'rb'))
 arr_og = pickle.load(open('arr_og.pkl', 'rb'))
 app = Flask(__name__)
+PrometheusMetrics(app)
 
 @app.route('/')
 def home():
