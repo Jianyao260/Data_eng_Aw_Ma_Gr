@@ -2,6 +2,7 @@ import unittest
 import pickle
 import pandas as pd
 from tweet_processing import clean_tweets, similar_tweets
+from flask import Flask, request, jsonify
 
 class TestProcessing(unittest.TestCase):
 
@@ -40,10 +41,11 @@ class TestProcessing(unittest.TestCase):
         a = clean_tweets(pd.DataFrame([[0,'Oct 7',784609194234306560,'/realDonaldTrump/status/784609194234306560','False',':) :D','DonaldTrump']], columns = ['Unnamed: 0', 'date', 'id', 'link', 'retweet', 'text', 'author']))
         self.assertEqual(a[0], '')
     
-
     #Testing cosine similarity for a given tweet
-    #def test_cosinesim(self):
-    #    arr = pickle.load(open('arr.pkl', 'rb'))
-    #    arr_og = pickle.load(open('arr_og.pkl', 'rb'))
-    #    a = similar_tweets('Police')
+    def test_cosinesim(self):
+        arr = pickle.load(open('arr.pkl', 'rb'))
+        arr_og = pickle.load(open('arr_og.pkl', 'rb'))
+        a = similar_tweets('Police', arr, arr_og)
+
+        self.assertEqual(a['tweet'][0], '#TeamTrump. Police and law enforcement seem to have killed one of the California shooters and are in a shootout with the others. Go police')
 
