@@ -20,6 +20,8 @@ python3 test_tweet_processing.py
 
 go to localhost:9090
 
+![alt-text-1](https://media.discordapp.net/attachments/783005857112784916/788740456019263498/metrics.PNG?width=724&height=427 "checking metrics") ![alt-text-2](https://media.discordapp.net/attachments/783005857112784916/788740456766242816/prometheus.PNG?width=1025&height=417 "targets")
+
 ## Launch alert manager
 ./alertmanager
 
@@ -47,6 +49,6 @@ In the 'dev' branch, we can run our application and release it:
 
 ![alt text](https://media.discordapp.net/attachments/783005857112784916/788735363766157332/Capture7.PNG)
 
-In the 'release' branch, we have a user acceptance for pushing the master :
+In the 'release' branch, we have a user acceptance for pushing to master :
 
 ![alt text](https://media.discordapp.net/attachments/783005857112784916/788735359491768330/release_branch.PNG)
