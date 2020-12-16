@@ -33,3 +33,20 @@ sudo systemctl start grafana-server
 go to localhost:3000
 
 ![alt text](https://media.discordapp.net/attachments/783005857112784916/788692598223011900/Capture.PNG)
+
+## Jenkins
+Go to your Jenkins account and connect your multi-branches pipeline to the gitHub repository
+
+![alt text](https://media.discordapp.net/attachments/783005857112784916/788735365825560586/Capture56.PNG)
+
+We have the several branches:
+
+![alt text](https://media.discordapp.net/attachments/783005857112784916/788735361350107146/branches.PNG)
+
+In the 'dev' branch, we can run our application and release it:
+
+![alt text](https://media.discordapp.net/attachments/783005857112784916/788735363766157332/Capture7.PNG)
+
+In the 'release' branch, we have a user acceptance for pushing the master :
+
+![alt text](https://media.discordapp.net/attachments/783005857112784916/788735359491768330/release_branch.PNG)
