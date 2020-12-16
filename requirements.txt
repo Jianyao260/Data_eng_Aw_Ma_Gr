@@ -1,0 +1,7 @@
+flask
+pandas
+numpy
+pickles
+sklearn
+gensim
+prometheus_flask_exporter == 0.7.1
