@@ -5,6 +5,8 @@ This is a small webapp where the user inputs a string, and the application retur
 ## Build the Flask application
 docker build -t mytweetapp 
 
+![alt text](https://ibb.co/VqxWRMz)
+
 ## Run the docker image
 docker run -d -p 80:80 -it --name tweet_app_c mytweetapp
 
