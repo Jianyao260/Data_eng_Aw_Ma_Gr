@@ -2,7 +2,7 @@
 
 This is a small webapp where the user inputs a string, and the application returns 20 Tweets which are similar to the input. The application can be monitored via Prometheus and Grafana, and a pipeline have been built with Jenkins to automate deployment.
 
-![alt text](https://i.ibb.co/CH65gVY/image-2020-12-16-114836.png)
+![alt text](https://cdn.discordapp.com/attachments/783005857112784916/788721474755887124/unknown.png)
 
 ## Build the Flask application
 docker build -t mytweetapp 
@@ -24,6 +24,8 @@ go to localhost:9090
 ./alertmanager
 
 go to localhost:9093
+
+![alt text](https://media.discordapp.net/attachments/783005857112784916/788693212234907658/Capture1.PNG)
 
 ## Grafana
 sudo systemctl start grafana-server
