@@ -4,12 +4,6 @@ pipeline{
     stage('Build the Flask application'){
       steps{
         script{
-          if (env.BRANCH_NAME == 'dev' || env.BRANCH_NAME == 'pipeline{
-  agent any
-  stages {
-    stage('Build the Flask application'){
-      steps{
-        script{
           if (env.BRANCH_NAME == 'dev' || env.BRANCH_NAME == 'Release' ) {
             sh 'docker build -t mytweetapp .'
           }
