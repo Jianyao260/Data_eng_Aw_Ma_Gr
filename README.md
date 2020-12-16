@@ -41,7 +41,7 @@ Go to your Jenkins account and connect your multi-branches pipeline to the gitHu
 
 ![alt text](https://media.discordapp.net/attachments/783005857112784916/788735365825560586/Capture56.PNG)
 
-We have the several branches:
+We have the following branches:
 
 ![alt text](https://media.discordapp.net/attachments/783005857112784916/788735361350107146/branches.PNG)
 
