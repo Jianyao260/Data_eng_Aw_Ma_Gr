@@ -49,6 +49,6 @@ In the 'dev' branch, we can run our application and release it:
 
 ![alt text](https://media.discordapp.net/attachments/783005857112784916/788735363766157332/Capture7.PNG)
 
-In the 'release' branch, we have a user acceptance for pushing to master :
+In the 'release' branch, we have an user acceptance for pushing to master :
 
 ![alt text](https://media.discordapp.net/attachments/783005857112784916/788735359491768330/release_branch.PNG)
