@@ -29,3 +29,5 @@ go to localhost:9093
 sudo systemctl start grafana-server
 
 go to localhost:3000
+
+![alt text](https://media.discordapp.net/attachments/783005857112784916/788692598223011900/Capture.PNG)
