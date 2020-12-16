@@ -4,7 +4,7 @@ pipeline{
     stage('Build the Flask application'){
       steps{
         script{
-          if (env.BRANCH_NAME == 'dev' || env.BRANCH_NAME == 'release' ) {
+          if (env.BRANCH_NAME == 'dev' || env.BRANCH_NAME == 'Release' ) {
             sh 'docker build -t mytweetapp .'
           }
         }
@@ -13,7 +13,7 @@ pipeline{
     stage('Run the docker image'){
       steps{
         script{
-          if (env.BRANCH_NAME == 'dev' || env.BRANCH_NAME == 'release' ) {
+          if (env.BRANCH_NAME == 'dev' || env.BRANCH_NAME == 'Release' ) {
             sh 'docker run -d -p 80:80 -it --name tweet_app_c mytweetapp'
           }  
         }
@@ -37,7 +37,7 @@ pipeline{
           if (env.BRANCH_NAME == 'dev') {
             echo 'Push to release '
           }
-          else if (env.BRANCH_NAME == 'release') {
+          else if (env.BRANCH_NAME == 'Release') {
             echo 'Already in release'
           }
         }  
@@ -46,7 +46,7 @@ pipeline{
     stage('User acceptance for pushing to master'){
       steps{
         script{
-          if (env.BRANCH_NAME == 'release' ) {
+          if (env.BRANCH_NAME == 'Release' ) {
             input 'Push to master ?'
           }
         }
@@ -55,7 +55,7 @@ pipeline{
     stage('Merging to master'){
       steps{
         script{
-          if (env.BRANCH_NAME == 'release') {
+          if (env.BRANCH_NAME == 'Release') {
             echo 'Merge to master'
           }
         }
@@ -64,7 +64,7 @@ pipeline{
     stage('Docker images down'){
       steps{
         script{
-          if (env.BRANCH_NAME == 'dev' || env.BRANCH_NAME == 'release' ) {
+          if (env.BRANCH_NAME == 'dev' || env.BRANCH_NAME == 'Release' ) {
             input 'Stop the container'
             sh 'docker rm -f tweet_app_c'
           }
